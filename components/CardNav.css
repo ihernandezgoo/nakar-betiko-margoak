@@ -1,10 +1,7 @@
 .card-nav-container {
-  position: absolute;
-  top: 2em;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 90%;
-  max-width: 800px;
+  position: relative;
+  width: min(1100px, calc(100% - 2rem));
+  margin: 0.75rem auto;
   z-index: 99;
   box-sizing: border-box;
 }
@@ -31,7 +28,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.5rem 0.45rem 0.55rem 1.1rem;
+  padding: 0.5rem 0.65rem 0.55rem 1rem;
   z-index: 2;
 }
 
@@ -88,12 +85,14 @@
   color: white;
   border: none;
   border-radius: calc(0.75rem - 0.35rem);
-  padding: 0 1rem;
+  padding: 0 0.95rem;
   height: 100%;
   font-weight: 500;
+  font-size: 0.92rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
   align-items: center;
+  white-space: nowrap;
 }
 
 .card-nav-cta-button:hover {
@@ -108,7 +107,7 @@
   bottom: 0;
   padding: 0.5rem;
   display: flex;
-  align-items: flex-end;
+  align-items: stretch;
   gap: 12px;
   visibility: hidden;
   pointer-events: none;
@@ -135,7 +134,7 @@
 
 .nav-card-label {
   font-weight: 400;
-  font-size: 22px;
+  font-size: 20px;
   letter-spacing: -0.5px;
 }
 
@@ -147,7 +146,7 @@
 }
 
 .nav-card-link {
-  font-size: 16px;
+  font-size: 15px;
   cursor: pointer;
   text-decoration: none;
   transition: opacity 0.3s ease;
@@ -160,10 +159,33 @@
   opacity: 0.75;
 }
 
+@media (max-width: 1024px) {
+  .card-nav-container {
+    width: min(960px, calc(100% - 1.5rem));
+    margin: 0.6rem auto;
+  }
+
+  .card-nav-top {
+    padding: 0.5rem 0.6rem 0.55rem 0.8rem;
+  }
+
+  .nav-card {
+    padding: 10px 12px;
+  }
+
+  .nav-card-label {
+    font-size: 18px;
+  }
+
+  .nav-card-link {
+    font-size: 14px;
+  }
+}
+
 @media (max-width: 768px) {
   .card-nav-container {
-    width: 90%;
-    top: 1.2em;
+    width: calc(100% - 1rem);
+    margin: 0.45rem auto;
   }
 
   .card-nav-top {
@@ -179,6 +201,15 @@
     position: static;
     transform: none;
     order: 1;
+    max-width: calc(100% - 56px);
+  }
+
+  .logo-container h1 {
+    font-size: 1rem;
+    line-height: 1.2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .logo {
@@ -196,6 +227,7 @@
     padding: 0.5rem;
     bottom: 0;
     justify-content: flex-start;
+    overflow-y: auto;
   }
 
   .nav-card {

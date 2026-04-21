@@ -1,3 +1,20 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
+
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	width: 100%;
+	overflow-x: hidden;
+}
+
+img,
+video,
+canvas,
+svg {
+	max-width: 100%;
+}

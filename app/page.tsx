@@ -2,7 +2,6 @@
 "use client";
 
 import Nav from "@/components/CardNav";
-import { FaPaintBrush, FaPalette, FaHome } from "react-icons/fa";
 import ServiciosSection from "@/components/ServiciosSection";
 import HeroMain from "@/components/HeroMain";
 import Footer from "@/components/Footer";
@@ -55,7 +54,7 @@ export default function Home() {
         />
       </div>
 
-      <main className="bg-white pt-24 md:pt-32">
+      <main className="bg-white pt-20 sm:pt-24 md:pt-28 lg:pt-32 overflow-x-clip">
         <HeroMain />
 
         <ServiciosSection />

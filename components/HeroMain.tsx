@@ -1,13 +1,11 @@
 export default function HeroMain() {
   return (
-    <section className="relative flex items-center min-h-85 py-4 ml-80 mr-80">
-      {/* Panel amarillo a la derecha */}
-      <div className="absolute right-0 top-0 bottom-0 w-[62%] bg-[#ffd700]" />
+    <section className="relative py-8 sm:py-10 md:py-12 lg:py-16 overflow-hidden">
+      <div className="absolute inset-y-0 right-0 w-full md:w-[56%] bg-[#ffd700]" />
 
-      {/* Contenedor flex */}
-      <div className="relative z-10 w-full px-3 md:px-6 flex items-center gap-2">
-        {/* Imagen izquierda - superpuesta */}
-        <div className="relative w-[50%] h-[50%]">
+      <div className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 items-center gap-6 md:grid-cols-2 md:gap-8 lg:gap-10">
+          <div className="relative aspect-4/3 w-full overflow-hidden rounded-lg shadow-lg md:aspect-5/4">
           <img
             src="/Pinturas/botes.webp"
             alt="Pintor trabajando"
@@ -15,11 +13,9 @@ export default function HeroMain() {
           />
         </div>
 
-        {/* Texto derecha encima del panel amarillo */}
-        <div className="relative w-[60%] flex flex-col justify-center px-4 md:px-8 overflow-hidden">
-          {/* SVG decorativo fondo */}
+          <div className="relative flex flex-col justify-center rounded-lg bg-[#ffd700]/95 p-5 sm:p-7 md:bg-transparent md:p-2 lg:p-4">
           <svg
-            className="absolute bottom-4 right-6 opacity-25 w-32 md:w-40"
+            className="pointer-events-none absolute -bottom-2 right-0 opacity-20 w-28 sm:w-32 md:w-36 lg:w-44"
             viewBox="0 0 120 120"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -30,15 +26,19 @@ export default function HeroMain() {
             <rect x="50" y="68" width="10" height="10" stroke="currentColor" strokeWidth="1.5" />
           </svg>
 
-          <h2 className="text-2xl md:text-3xl font-bold text-black leading-snug mb-3 pr-8">
-            En Nakar betiko margoak
-          </h2>
-          <p className="text-base md:text-lg text-gray-900 mb-6">
-            Pinturas, lacado de puertas, papeles de todo tipo y mucho más.
-          </p>
-          <a href="/servicios" className="inline-block bg-[#0f1f35] text-white font-bold px-7 py-3 text-base w-fit">
-            Ver todos
-          </a>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black leading-tight mb-3 sm:mb-4 max-w-[22ch]">
+              En Nakar betiko margoak
+            </h2>
+            <p className="text-sm sm:text-base md:text-lg text-gray-900 mb-6 max-w-[48ch]">
+              Pinturas, lacado de puertas, papeles de todo tipo y mucho mas.
+            </p>
+            <a
+              href="/servicios"
+              className="inline-block w-fit bg-[#0f1f35] text-white font-bold px-6 sm:px-7 py-3 text-sm sm:text-base"
+            >
+              Ver todos
+            </a>
+          </div>
         </div>
       </div>
     </section>
